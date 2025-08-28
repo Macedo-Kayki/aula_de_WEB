@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kayki</title>
+</head>
+
+<body>
+    <header>
+        <div class="options">
+            <h3>Escolha um exemplo para ser exibido</h3>
+            <div class="btn">
+                <button id="ex1btn">Exemplo 1</button>
+                <button id="ex2btn">Exemplo 2</button>
+                <button id="ex3btn">Exemplo 3</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content" id="ex1">
+            <p>Exemplo do uso de download
+                <a href="" download="images.jpg">Download</a>
+            </p>
+            <button id="preview-btn">Preview da imagem</button>
+            <div class="preview" id="preview">
+                <img src="images.jpg" id="preview-img">
+            </div>
+            <p>Exemplo com href mailto:, tel:</p>
+            <ul>
+                <li><a href="https://estacio.br" target="_blank">Site</a></li>
+                <li><a href="mailto:raphael.jesus@estacio.br">E-mail</a></li>
+                <li><a href="tel:+55999999999">Celular</a></li>
+            </ul>
+        </div>
+        <div class="content" id="ex2">
+            <p><a href="#linkando_sessao">Pula para sessão de baixo.</a></p>
+            <br><br><br><br><br><br><br>
+            <h2 id="linkando_sessao">sessão Linkada</h2>
+        </div>
+        <div class="content" id="ex3">
+            <a href="produto.html" target="_blank">Produtos</a>
+            <a href="contato.html">Contato</a>
+            <a href="sobre/sobre.html">Sobre</a>
+        </div>
+    </div>   
+ <script src="script.js"></script>
+</body>
+
+</html>
