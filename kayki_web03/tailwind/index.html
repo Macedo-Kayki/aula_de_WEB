@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tables</title>
+</head>
+
+<body>
+    <div class="flex items-center justify-center w-screen h-screen">
+        <div class="flex bg-[#4e66b5] w-150 h-100 rounded-[50px] items-center justify-center">
+            <table class="min-w-[500px] md:table-fixed rounded-lg shadow-sm overflow-hidden">
+                <caption class="caption-top mt-[10px] text-white bg-[#324378] w-30 m-auto rounded-[10px] mb-[10px] ">
+                    Artilharia
+                </caption>
+                <thead>
+                    <tr class="bg-gray-50 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="">Pos.</th>
+                        <th class="">Jogador</th>
+                        <th class="">Time</th>
+                        <th class="">Gols</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 text-sm text-gray-700 bg-[#dbdbdb]">
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-6 py-4">G</td>
+                        <td class="px-6 py-4">Alisson Becker</td>
+                        <td class="px-6 py-4">Liverpool</td>
+                        <td class="px-6 py-4">2</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-6 py-4">SA</td>
+                        <td class="px-6 py-4">Gabigol</td>
+                        <td class="px-6 py-4">Cruzeiro</td>
+                        <td class="px-6 py-4">90</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-6 py-4">PD</td>
+                        <td class="px-6 py-4">Vinicius Junior</td>
+                        <td class="px-6 py-4">Real Madrid</td>
+                        <td class="px-6 py-4">105</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-6 py-4">CA</td>
+                        <td class="px-6 py-4">Pedro</td>
+                        <td class="px-6 py-4">Flamengo</td>
+                        <td class="px-6 py-4">100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
