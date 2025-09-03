@@ -11,3 +11,4 @@ E as seguintes frameworks:
 Laravel;
 BootStrap;
 JQuery;
+Tailwind;
