@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Músicas</title>
+</head>
+
+<body>
+    <div class="main">
+        <form action="" method="post">
+            <fieldset>
+                <legend>Escolha seu Álbum/EP</legend>
+                <div class="container">
+                    <div class="card">
+                        <input type="radio" name="grupo" id="artgen">
+                        <label for="artgen">
+                            <img src="./img/artgen.jpg" alt="Artista Genérico">
+                        </label>
+                    </div>
+                    <div class="card">
+                        <input type="radio" name="grupo" id="pobrejuan">
+                        <label for="pobrejuan">
+                            <img src="./img/pobrejuan.jpg" alt="Pobre Juan">
+                        </label>
+                    </div>
+                    <div class="card">
+                        <input type="radio" name="grupo" id="niink">
+                        <label for="niink">
+                            <img src="./img/niink.jpg" alt="Niink">
+                        </label>
+                    </div>
+                    <div class="card">
+                        <input type="radio" name="grupo" id="icgl">
+                        <label for="icgl">
+                            <img src="./img/ghard.webp" alt="Icones Globais">
+                        </label>
+                    </div>
+                    <div class="card">
+                        <input type="radio" name="grupo" id="ga">
+                        <label for="ga">
+                            <img src="./img/ga.jpg" alt="Não teria coragem">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="artist">
+            <label for="artist">Escolha seu artista:</label>
+            <select name="artist" id="artist">
+                <optgroup label="Rio de Janeiro">
+                    <option>Filipe Ret</option>
+                    <option>Orochi</option>
+                    <option>Xamã</option>
+                    <option>MC Cabelinho</option>
+                </optgroup>
+                <optgroup label="São Paulo">
+                    <option>Veigh</option>
+                    <option>Yunk Vino</option>
+                    <option>Kyan</option>
+                    <option>MC Hariel</option>
+                </optgroup>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

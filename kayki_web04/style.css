@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    font-family: Calibri;
+}
+body{
+    background-color: #d8d8d8;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+form{
+    width: 90%;
+}
+
+fieldset{
+    border: 1px solid #000;
+    border-radius: 20px;
+    font-size: 26px;
+}
+
+form img{
+    height: 160px;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #505050;
+    transition: 0.3s ease-in-out;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card{
+    background-color: #313131;
+    display: flex;
+    width: 250px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+form img:hover{
+    width: 230px;
+    height: 180px;
+}
+
+.card:hover{
+    padding: 10px;
+    background-color: #464646;
+    box-shadow: 2px 2px 2px 2px #6e6e6e;
+}
+
+input[type="radio"]{
+    margin-right: 10px;
+}
+
+.artist{
+    background-color: #6e6e6e;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.artist select{
+    border: none;
+    border-radius: 5px;
+}
+
+.artist select:focus{
+    border: none;
+    box-shadow: 1px 1px 1px 1px #c0c0c0;
+}
