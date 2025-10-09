@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6 - CSS</title>
+</head>
+
+<body>
+    <nav>
+        <label for="menu-toggle">&#9776;</label>
+        <input type="checkbox" id="menu-toggle">
+        <ul>
+            <li>
+                <a href="painel.html">EXIBIÇÃO</a>
+            </li>
+            <li>
+                <a href="responsivo.html">RESPONSIVO</a>
+            </li>
+            <li>
+                <a href="">Teste</a>
+            </li>
+        </ul>
+    </nav>
+    <aside class="esquerda">Lado esquerdo</aside>
+    <aside class="direita">Lado direito</aside>
+    <aside class="direita">Lado direito</aside>
+    <main>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus quas dicta officiis quidem, laboriosam
+            quae consequuntur modi, iusto laborum, alias nostrum esse ratione numquam delectus. Minima amet magni
+            necessitatibus delectus!</p>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, dolorum? Officiis cumque dolore libero
+            vitae sequi provident sapiente alias ipsam, tempora sunt quibusdam inventore porro ea voluptatem ex expedita
+            molestiae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae atque soluta non, incidunt eius
+            assumenda quasi modi iusto eum quaerat cumque labore nihil inventore aliquam beatae, distinctio dolorem
+            tempore?
+        </section>
+    </main>
+    <style>
+        .esquerda {
+            background-color: rgb(0, 217, 255);
+            float: left;
+            width: 15%;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .direita {
+            background-color: rgb(153, 255, 0);
+            float: right;
+            width: 15%;
+            height: 300px;
+            margin: 10px;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        label {
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+
+        #menu-toggle:checked+ul {
+            display: block;
+        }
+
+        li a {
+            color: #fff;
+        }
+
+        @media(min-width: 600px) {
+            label {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                gap: 1em;
+            }
+        }
+
+        section {
+            display: flex;
+            overflow: auto;
+            height: 50px;
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 20px;
+        }
+    </style>
+</body>
+
+</html>
