@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rive + GSAP</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@rive-app/canvas@2.19.0"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f0f0f;
+      height: 300vh;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      perspective: 1200px;
+    }
+    #riveBox {
+      transform-style: preserve-3d;
+      filter: blur(10px);
+      opacity: 0;
+    }
+    .title {
+      position: absolute;
+      top: 15%;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 3rem;
+      opacity: 0.2;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <div class="title">Scroll to Animate</div>
+    <canvas id="riveBox" width="480" height="480"></canvas>
+  </div>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger)
+
+    const r = new rive.Rive({
+      src: "anim.riv",
+      canvas: document.getElementById("riveBox"),
+      stateMachines: "Machine",
+      autoplay: true,
+      onLoad: () => {
+        const i = r.stateMachineInputs("Machine").find(x => x.name === "progress")
+
+        gsap.to("#riveBox", {
+          opacity: 1,
+          scale: 1.25,
+          rotationY: 25,
+          rotationX: 10,
+          filter: "blur(0px)",
+          duration: 1.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".hero",
+            start: "top top",
+            end: "30% top",
+            scrub: true
+          }
+        })
+
+        gsap.to("#riveBox", {
+          y: -220,
+          scale: 1.5,
+          rotation: 8,
+          scrollTrigger: {
+            trigger: ".hero",
+            start: "top top",
+            end: "150% bottom",
+            scrub: true,
+            onUpdate: e => i.value = e.progress
+          }
+        })
+      }
+    })
+  </script>
+</body>
+</html>
